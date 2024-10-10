@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${animal.japanese_name} + 'の詳細'"></title>
+</head>
+
+<body>
+	<h1>動物詳細画面</h1>
+	<p>No: <span th:text="${animal.id}"></span></p>
+	<p>英名：<span th:text="${animal.name}"></span></p>
+	<p>和名：<span th:text="${animal.japanese_name}"></span></p>
+	<p>鳴き声：<span th:text="${animal.cry}"></span></p>
+	<button onclick="location.href='/animal-search'">トップへ</button>
+</body>
+
+</html>

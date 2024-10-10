@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>動物検索画面</title>
+</head>
+
+<body>
+	<h1>動物検索画面</h1>
+	<form action="/animal-detail" method="post">
+		<select name="id">
+			<th:block th:each="animal : ${animals}">
+				<option th:value="${animal.id}" th:text="${animal.japanese_name}"></option>
+			</th:block>
+		</select>
+		<button type="submit">検索</button>
+	</form>
+</body>
+
+</html>
